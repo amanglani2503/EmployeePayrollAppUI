@@ -12,6 +12,7 @@
     <table>
         <thead>
             <tr>
+                <th>ID</th>
                 <th>NAME</th>
                 <th>GENDER</th>
                 <th>DEPARTMENT</th>
@@ -22,6 +23,9 @@
         </thead>
         <tbody>
             <tr *ngFor="let employee of employees">
+                <td>
+                    {{employee.id}}
+                </td>
                 <td>
                     <img [src]="employee.image" alt="Profile">
                     {{ employee.name }}

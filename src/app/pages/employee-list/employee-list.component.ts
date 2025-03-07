@@ -11,6 +11,7 @@ import { CommonModule } from '@angular/common';
 export class EmployeeListComponent {
   employees = [
     { 
+      id: '1',
       name: 'Amarpa Kumar', 
       gender: 'Female', 
       departments: ['Sales', 'HR', 'Finance'], 
@@ -19,6 +20,7 @@ export class EmployeeListComponent {
       image: 'assets/dp1.jpeg' 
     },
     { 
+      id: '2',
       name: 'Mohammad Shaikh', 
       gender: 'Female', 
       departments: ['Sales', 'HR', 'Finance'], 
@@ -27,6 +29,7 @@ export class EmployeeListComponent {
       image: 'assets/dp2.jpeg'  
     },
     { 
+      id: '3',
       name: 'Bubere Qais', 
       gender: 'Male', 
       departments: ['Sales', 'HR', 'Finance'], 
