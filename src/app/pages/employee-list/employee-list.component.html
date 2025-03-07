@@ -1,0 +1,44 @@
+<div class="employee-container">
+    <div class="header">
+        <h2>Employee Details</h2>
+        <div class="search-add">
+            <input type="text" placeholder="Search...">
+            <button class="add-user" routerLink="/add-employee">
+                <span>+ Add User</span>
+            </button>            
+        </div>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>NAME</th>
+                <th>GENDER</th>
+                <th>DEPARTMENT</th>
+                <th>SALARY</th>
+                <th>START DATE</th>
+                <th>ACTIONS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let employee of employees">
+                <td>
+                    <img [src]="employee.image" alt="Profile">
+                    {{ employee.name }}
+                </td>
+                <td>{{ employee.gender }}</td>
+                <td>
+                    <span class="badge" *ngFor="let dept of employee.departments">
+                        {{ dept }}
+                    </span>
+                </td>
+                <td>₹ {{ employee.salary }}</td>
+                <td>{{ employee.startDate }}</td>
+                <td>
+                    <button class="edit-btn">✏️</button>
+                    <button class="delete-btn">🗑️</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
