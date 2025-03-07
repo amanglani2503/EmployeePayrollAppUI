@@ -1,6 +1,7 @@
 .container {
     text-align: center;
     padding: 20px;
+    background-color: rgb(246, 211, 217);
   }
   
   h2 {
@@ -17,7 +18,7 @@
     width: 200px;
     padding: 20px;
     border-radius: 10px;
-    background-color: #007bff;
+    background-color: #4e0564;
     color: white;
     text-align: center;
     cursor: pointer;
