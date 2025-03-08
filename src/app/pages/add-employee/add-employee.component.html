@@ -1,33 +1,32 @@
 <body>
     <div class="container">
         <h2>Employee Payroll Form</h2>
-        <form>
+        <form #employeeForm="ngForm" (ngSubmit)="submitForm($event, employeeForm)" novalidate>
             <div class="form-group">
-                <label>Employee ID</label>
-                <input type="text" name="id" required placeholder="Enter Employee ID">
+                <label for="id">Employee ID</label>
+                <input type="text" id="id" name="id" required placeholder="Enter Employee ID" ngModel>
             </div>
-            
             <div class="form-group">
-                <label>Name</label>
-                <input type="text" name="name" required placeholder="Enter your name">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your name" ngModel>
             </div>
             <div class="form-group">
                 <label>Profile Image</label>
                 <div class="profile-container">
                     <label class="profile-option">
-                        <input type="radio" name="profile" value="1">
+                        <input type="radio" name="profile" value="assets/dp1.jpeg" required ngModel>
                         <img src="assets/dp1.jpeg" alt="Profile 1" class="profile-img">
                     </label>
                     <label class="profile-option">
-                        <input type="radio" name="profile" value="2">
+                        <input type="radio" name="profile" value="assets/dp2.jpeg" required ngModel>
                         <img src="assets/dp2.jpeg" alt="Profile 2" class="profile-img">
                     </label>
                     <label class="profile-option">
-                        <input type="radio" name="profile" value="3">
+                        <input type="radio" name="profile" value="assets/dp3.jpeg" required ngModel>
                         <img src="assets/dp3.jpeg" alt="Profile 3" class="profile-img">
                     </label>
                     <label class="profile-option">
-                        <input type="radio" name="profile" value="4">
+                        <input type="radio" name="profile" value="assets/dp4.jpeg" required ngModel>
                         <img src="assets/dp4.jpeg" alt="Profile 4" class="profile-img">
                     </label>
                 </div>
@@ -35,45 +34,45 @@
             
             <div class="form-group">
                 <label>Gender</label>
-                <input type="radio" name="gender" value="Male"> Male
-                <input type="radio" name="gender" value="Female"> Female
+                <input type="radio" name="gender" value="Male" required ngModel> Male
+                <input type="radio" name="gender" value="Female" required ngModel> Female
             </div>
             <div class="form-group">
                 <label>Department</label>
-                <input type="checkbox" name="dept" value="HR"> HR
-                <input type="checkbox" name="dept" value="Sales"> Sales
-                <input type="checkbox" name="dept" value="Finance"> Finance
-                <input type="checkbox" name="dept" value="Engineer"> Engineer
-                <input type="checkbox" name="dept" value="Others"> Others
+                <input type="checkbox" name="deptHR" value="HR" ngModel> HR
+                <input type="checkbox" name="deptSales" value="Sales" ngModel> Sales
+                <input type="checkbox" name="deptFinance" value="Finance" ngModel> Finance
+                <input type="checkbox" name="deptEngineer" value="Engineer" ngModel> Engineer
+                <input type="checkbox" name="deptOthers" value="Others" ngModel> Others
             </div>
             <div class="form-group">
                 <label for="salary">Salary</label>
-                <input type="text" id="salary" name="salary" placeholder="Enter Salary">
+                <input type="text" id="salary" name="salary" required placeholder="Enter Salary" ngModel>
             </div>
             
             <div class="form-group">
                 <label>Start Date</label>
                 <div class="date-container">
-                    <select name="day">
+                    <select name="day" required ngModel>
                         <option value="">Day</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
+                        <option value="1">01</option>
+                        <option value="2">02</option>
+                        <option value="3">03</option>
+                        <option value="4">04</option>
+                        <option value="5">05</option>
                         <!-- Add more days -->
                     </select>
                     
-                    <select name="month">
+                    <select name="month" required ngModel>
                         <option value="">Month</option>
-                        <option value="1">January</option>
-                        <option value="2">February</option>
-                        <option value="3">March</option>
-                        <option value="4">April</option>
+                        <option value="1">01</option>
+                        <option value="2">02</option>
+                        <option value="3">03</option>
+                        <option value="4">04</option>
                         <!-- Add more months -->
                     </select>
                     
-                    <select name="year">
+                    <select name="year" required ngModel>
                         <option value="">Year</option>
                         <option value="2024">2024</option>
                         <option value="2023">2023</option>
@@ -84,8 +83,8 @@
             </div>
             
             <div class="form-group">
-                <label>Notes</label>
-                <textarea rows="4"></textarea>
+                <label for="notes">Notes</label>
+                <textarea id="notes" name="notes" rows="4" required ngModel></textarea>
             </div>
             <div class="btn-group">
                 <button type="button" class="cancel">Cancel</button>
